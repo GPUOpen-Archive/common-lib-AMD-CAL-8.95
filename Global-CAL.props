@@ -8,8 +8,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
-      <AdditionalDependencies>aticalrt$(GDTPlatformSuffixNumBitsOnly).lib;aticalcl$(GDTPlatformSuffixNumBitsOnly).lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <DelayLoadDLLs>aticalrt$(GDTPlatformSuffixNumBitsOnly).dll;aticalcl$(GDTPlatformSuffixNumBitsOnly).dll;atcaldd$(GDTPlatformSuffixNumBitsOnly).dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <AdditionalDependencies>aticalrt$(AMDTPlatformSuffixNumBitsOnly).lib;aticalcl$(AMDTPlatformSuffixNumBitsOnly).lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>aticalrt$(AMDTPlatformSuffixNumBitsOnly).dll;aticalcl$(AMDTPlatformSuffixNumBitsOnly).dll;atcaldd$(AMDTPlatformSuffixNumBitsOnly).dll;%(DelayLoadDLLs)</DelayLoadDLLs>
     </Link>
   </ItemDefinitionGroup>
 </Project>
