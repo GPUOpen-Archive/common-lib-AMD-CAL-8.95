@@ -1,91 +1,24 @@
 /* ============================================================
 
-Copyright (c) 2007 Advanced Micro Devices, Inc.  All rights reserved.
+Copyright (c) 2016-2019 Advanced Micro Devices, Inc. All rights reserved.
 
-Redistribution and use of this material is permitted under the following
-conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Redistributions must retain the above copyright notice and all terms of this
-license.
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-In no event shall anyone redistributing or accessing or using this material
-commence or participate in any arbitration or legal action relating to this
-material against Advanced Micro Devices, Inc. or any copyright holders or
-contributors. The foregoing shall survive any expiration or termination of
-this license or any agreement or access or use related to this material.
-
-ANY BREACH OF ANY TERM OF THIS LICENSE SHALL RESULT IN THE IMMEDIATE REVOCATION
-OF ALL RIGHTS TO REDISTRIBUTE, ACCESS OR USE THIS MATERIAL.
-
-THIS MATERIAL IS PROVIDED BY ADVANCED MICRO DEVICES, INC. AND ANY COPYRIGHT
-HOLDERS AND CONTRIBUTORS "AS IS" IN ITS CURRENT CONDITION AND WITHOUT ANY
-REPRESENTATIONS, GUARANTEE, OR WARRANTY OF ANY KIND OR IN ANY WAY RELATED TO
-SUPPORT, INDEMNITY, ERROR FREE OR UNINTERRUPTED OPERATION, OR THAT IT IS FREE
-FROM DEFECTS OR VIRUSES.  ALL OBLIGATIONS ARE HEREBY DISCLAIMED - WHETHER
-EXPRESS, IMPLIED, OR STATUTORY - INCLUDING, BUT NOT LIMITED TO, ANY IMPLIED
-WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE,
-ACCURACY, COMPLETENESS, OPERABILITY, QUALITY OF SERVICE, OR NON-INFRINGEMENT.
-IN NO EVENT SHALL ADVANCED MICRO DEVICES, INC. OR ANY COPYRIGHT HOLDERS OR
-CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE,
-EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
-OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, REVENUE, DATA, OR PROFITS; OR
-BUSINESS INTERRUPTION) HOWEVER CAUSED OR BASED ON ANY THEORY OF LIABILITY
-ARISING IN ANY WAY RELATED TO THIS MATERIAL, EVEN IF ADVISED OF THE POSSIBILITY
-OF SUCH DAMAGE. THE ENTIRE AND AGGREGATE LIABILITY OF ADVANCED MICRO DEVICES,
-INC. AND ANY COPYRIGHT HOLDERS AND CONTRIBUTORS SHALL NOT EXCEED TEN DOLLARS
-(US $10.00). ANYONE REDISTRIBUTING OR ACCESSING OR USING THIS MATERIAL ACCEPTS
-THIS ALLOCATION OF RISK AND AGREES TO RELEASE ADVANCED MICRO DEVICES, INC. AND
-ANY COPYRIGHT HOLDERS AND CONTRIBUTORS FROM ANY AND ALL LIABILITIES,
-OBLIGATIONS, CLAIMS, OR DEMANDS IN EXCESS OF TEN DOLLARS (US $10.00). THE
-FOREGOING ARE ESSENTIAL TERMS OF THIS LICENSE AND, IF ANY OF THESE TERMS ARE
-CONSTRUED AS UNENFORCEABLE, FAIL IN ESSENTIAL PURPOSE, OR BECOME VOID OR
-DETRIMENTAL TO ADVANCED MICRO DEVICES, INC. OR ANY COPYRIGHT HOLDERS OR
-CONTRIBUTORS FOR ANY REASON, THEN ALL RIGHTS TO REDISTRIBUTE, ACCESS OR USE
-THIS MATERIAL SHALL TERMINATE IMMEDIATELY. MOREOVER, THE FOREGOING SHALL
-SURVIVE ANY EXPIRATION OR TERMINATION OF THIS LICENSE OR ANY AGREEMENT OR
-ACCESS OR USE RELATED TO THIS MATERIAL.
-
-NOTICE IS HEREBY PROVIDED, AND BY REDISTRIBUTING OR ACCESSING OR USING THIS
-MATERIAL SUCH NOTICE IS ACKNOWLEDGED, THAT THIS MATERIAL MAY BE SUBJECT TO
-RESTRICTIONS UNDER THE LAWS AND REGULATIONS OF THE UNITED STATES OR OTHER
-COUNTRIES, WHICH INCLUDE BUT ARE NOT LIMITED TO, U.S. EXPORT CONTROL LAWS SUCH
-AS THE EXPORT ADMINISTRATION REGULATIONS AND NATIONAL SECURITY CONTROLS AS
-DEFINED THEREUNDER, AS WELL AS STATE DEPARTMENT CONTROLS UNDER THE U.S.
-MUNITIONS LIST. THIS MATERIAL MAY NOT BE USED, RELEASED, TRANSFERRED, IMPORTED,
-EXPORTED AND/OR RE-EXPORTED IN ANY MANNER PROHIBITED UNDER ANY APPLICABLE LAWS,
-INCLUDING U.S. EXPORT CONTROL LAWS REGARDING SPECIFICALLY DESIGNATED PERSONS,
-COUNTRIES AND NATIONALS OF COUNTRIES SUBJECT TO NATIONAL SECURITY CONTROLS.
-MOREOVER, THE FOREGOING SHALL SURVIVE ANY EXPIRATION OR TERMINATION OF ANY
-LICENSE OR AGREEMENT OR ACCESS OR USE RELATED TO THIS MATERIAL.
-
-NOTICE REGARDING THE U.S. GOVERNMENT AND DOD AGENCIES: This material is
-provided with "RESTRICTED RIGHTS" and/or "LIMITED RIGHTS" as applicable to
-computer software and technical data, respectively. Use, duplication,
-distribution or disclosure by the U.S. Government and/or DOD agencies is
-subject to the full extent of restrictions in all applicable regulations,
-including those found at FAR52.227 and DFARS252.227 et seq. and any successor
-regulations thereof. Use of this material by the U.S. Government and/or DOD
-agencies is acknowledgment of the proprietary rights of any copyright holders
-and contributors, including those of Advanced Micro Devices, Inc., as well as
-the provisions of FAR52.227-14 through 23 regarding privately developed and/or
-commercial computer software.
-
-This license forms the entire agreement regarding the subject matter hereof and
-supersedes all proposals and prior discussions and writings between the parties
-with respect thereto. This license does not affect any ownership, rights, title,
-or interest in, or relating to, this material. No terms of this license can be
-modified or waived, and no breach of this license can be excused, unless done
-so in a writing signed by all affected parties. Each term of this license is
-separately enforceable. If any term of this license is determined to be or
-becomes unenforceable or illegal, such term shall be reformed to the minimum
-extent necessary in order for this license to remain in effect in accordance
-with its terms as modified by such reformation. This license shall be governed
-by and construed in accordance with the laws of the State of Texas without
-regard to rules on conflicts of law of any state or jurisdiction or the United
-Nations Convention on the International Sale of Goods. All disputes arising out
-of this license shall be subject to the jurisdiction of the federal and state
-courts in Austin, Texas, and all defenses are hereby waived concerning personal
-jurisdiction and venue of these courts.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
 ============================================================ */
 
@@ -740,12 +673,12 @@ typedef enum CALheapTypeEnum {
 typedef CALresult (CALAPIENTRYP PFNCALRESGETHEAP) (CALresource* res, CALdeviceDesc* devDesc, CALheapType type, CALuint size);
 
 /**
- * @fn calGetFuncInfoFromImage(CALimage         image, 
+ * @fn calGetFuncInfoFromImage(CALimage         image,
  *                             CALfuncInfo*     pFuncInfo)
  *
  * @brief get func information from image file
  *
- * gets a func information from <i>image</i> and returns the 
+ * gets a func information from <i>image</i> and returns the
  * information in <i>*pFuncInfo</i> if successful.
  *
  * Implementation will allow func information accessible dependent from context
@@ -803,7 +736,7 @@ typedef CALresult (CALAPIENTRYP PFNCONVERTBINARYTOTEXT)(const CALvoid* binary, C
 /**
  * @fn calFreeTextBinary(const CALvoid* binary)
  *
- * @brief Free memory returned by the IL or the Binary pointer. This is used with calCompileILToBinary and calCompileBinaryToIL. 
+ * @brief Free memory returned by the IL or the Binary pointer. This is used with calCompileILToBinary and calCompileBinaryToIL.
  *
  *
  * The memory for the Il source pointer is dynamically allocated and hence needs to be released to prevent memory leaks.
@@ -833,7 +766,7 @@ typedef struct CALdeviceattribsExtRec
  *
  * @return Returns CAL_RESULT_OK on success, CAL_RESULT_ERROR if there was an error.
  *
- * @sa calDeviceGetStatus calDeviceGetAttribs 
+ * @sa calDeviceGetStatus calDeviceGetAttribs
  */
 typedef CALresult (CALAPIENTRYP PFNCALDEVICEGETATTRIBSEXT) (CALdeviceattribsExt* attribsExt, CALdevice device);
 
@@ -885,7 +818,7 @@ typedef enum
 {
     CAL_VID_ENC_H264_BASELINE = 1,  // H.264 bitstream acceleration baseline profile
     CAL_VID_ENC_H264_MAIN,          // H.264 bitstream acceleration main profile
-    CAL_VID_ENC_H264_HIGH,          // H.264 bitstream acceleration high profile  
+    CAL_VID_ENC_H264_HIGH,          // H.264 bitstream acceleration high profile
 } CALencodeProfile;
 
 typedef enum
@@ -930,7 +863,7 @@ struct CALvideoPropertiesRec
     CALdecodeFormat  format;
     CALuint          width;
     CALuint          height;
-    CALcontextEnum   VideoEngine_name; 
+    CALcontextEnum   VideoEngine_name;
 };
 
 struct CALprogramVideoRec
@@ -982,10 +915,10 @@ struct CALdeviceVideoAttribsRec
     CALuint                 max_decode_sessions;
     const CALvideoAttrib*   video_attribs;  // list of supported
                                             // profile/format pairs
-    const CALvideoEncAttrib*	  video_enc_attribs; 
+    const CALvideoEncAttrib*	  video_enc_attribs;
 };
 
-#if 1 
+#if 1
 typedef CALresult (CALAPIENTRYP PFNCALCTXPROPERTIESCREATE)(CALcontext* pCtx, CALdevice device, CALcontextProperties* pProperties);
 typedef CALresult (CALAPIENTRYP PFNCALCTXRUNPROGRAMVIDEO)(CALevent* pEvent, CALcontext ctx, CALprogramVideo* pProgramVideo);
 typedef CALresult (CALAPIENTRYP PFNCALDEVICEGETVIDEOATTRIBS)(CALdeviceVideoAttribs* pAttribs, CALuint ordinal, CALuint flags);
@@ -1015,7 +948,7 @@ struct CALEncodeGetNumberOfModesRec
     unsigned int num_of_encode_Mode;
 };
 
-typedef enum 
+typedef enum
 {
     CAL_VID_encode_MODE_NONE	= 0,
     CAL_VID_encode_AVC_FULL		= 1,
@@ -1037,7 +970,7 @@ typedef enum
 
 typedef struct _CAL_VID_PROFILE_LEVEL
 {
-    CALuint      profile;		//based on  H.264 standard 
+    CALuint      profile;		//based on  H.264 standard
     CALuint      level;
 } CAL_VID_PROFILE_LEVEL;
 
@@ -1055,7 +988,7 @@ typedef struct
     CALuint                       maxPicSizeInMBs;    // Max picture size in MBs
     CALuint                       minPicSizeInMBs;     // Min picture size in MBs
     CALuint                       numPictureFormats;   // number of supported picture formats
-    CAL_VID_PICTURE_FORMAT        supportedPictureFormats[CAL_VID_MAX_NUM_PICTURE_FORMATS_H264_AVC]; 
+    CAL_VID_PICTURE_FORMAT        supportedPictureFormats[CAL_VID_MAX_NUM_PICTURE_FORMATS_H264_AVC];
     CALuint                       numProfileLevels;     // number of supported profiles/levels returne;
     CAL_VID_PROFILE_LEVEL         supportedProfileLevel[CAL_VID_MAX_NUM_PROFILE_LEVELS_H264_AVC];
     CALuint                       maxBitRate;               // Max bit rate
@@ -1225,7 +1158,7 @@ typedef struct
 typedef enum
 {
     CAL_VID_PICTURE_STRUCTURE_H264_NONE         = 0,
-    CAL_VID_PICTURE_STRUCTURE_H264_FRAME        = 1, 
+    CAL_VID_PICTURE_STRUCTURE_H264_FRAME        = 1,
     CAL_VID_PICTURE_STRUCTURE_H264_TOP_FIELD    = 2,
     CAL_VID_PICTURE_STRUCTURE_H264_BOTTOM_FIELD = 3
 } CAL_VID_PICTURE_STRUCTURE_H264;
@@ -1256,7 +1189,7 @@ typedef struct
 
     CAL_VID_ENCODE_PARAMETERS_H264_FLAGS flags;                          // enable/disable any supported features
 
-    CALboolean                           insertSPS;    
+    CALboolean                           insertSPS;
     CAL_VID_PICTURE_STRUCTURE_H264       pictureStructure;
     CALboolean                           forceRefreshMap;
     CALuint                              forceIMBPeriod;
@@ -1273,7 +1206,7 @@ typedef enum
     CAL_VID_BUFFER_TYPE_SLICE                = 6
 } CAL_VID_BUFFER_TYPE;
 
-#define CAL_VID_SURFACE_HANDLE                      void* 
+#define CAL_VID_SURFACE_HANDLE                      void*
 
 typedef struct
 {
@@ -1292,7 +1225,7 @@ typedef enum
 {
     CAL_VID_TASK_STATUS_NONE        = 0,
     CAL_VID_TASK_STATUS_COMPLETE    = 1,	 // encoding task has finished successfully.
-    CAL_VID_TASK_STATUS_FAILED      = 2         	 // encoding task has finished but failed. 
+    CAL_VID_TASK_STATUS_FAILED      = 2         	 // encoding task has finished but failed.
 } CAL_VID_TASK_STATUS;
 
 typedef struct
@@ -1300,7 +1233,7 @@ typedef struct
     CALuint                 size;                         // structure size
     CALuint                 taskID;                    // task ID
     CAL_VID_TASK_STATUS    status;                       // Task status. May be duplicated if current task has multiple output blocks.
-    CALuint                 size_of_bitstream_data;                       // data size of the output block 
+    CALuint                 size_of_bitstream_data;                       // data size of the output block
     void*                  bitstream_data;    // read pointer the top portion of the generated bitstream data for the current task
 } CAL_VID_OUTPUT_DESCRIPTION;
 
@@ -1312,9 +1245,9 @@ typedef CALresult (CALAPIENTRYP PFNCALENCODEGETNUMBEROFMODES)(CALcontext pCtx, C
 typedef CALresult (CALAPIENTRYP PFNCALENCODEGETMODES)(CALcontext pCtx, CALuint device_id, CALuint NumEncodeModesToRetrieve,CALEncodeGetModes* pEncodeModes);
 typedef CALresult (CALAPIENTRYP PFNCALENCODEGETDEVICECAP)(CALcontext pCtx, CALuint device_id, CALuint encode_cap_total_size, CALEncodeGetDeviceCAP *pEncodeCAP);
 
-typedef CALresult (CALAPIENTRYP PFNCALENCODECREATESESSION)(CALcontext ctx, CALuint device_id, 
+typedef CALresult (CALAPIENTRYP PFNCALENCODECREATESESSION)(CALcontext ctx, CALuint device_id,
                                                    CALencodeMode encode_mode, CAL_VID_PROFILE_LEVEL encode_profile_level,
-                                                   CAL_VID_PICTURE_FORMAT encode_formatm, 
+                                                   CAL_VID_PICTURE_FORMAT encode_formatm,
                                                    CALuint encode_width, CALuint encode_height,
                                                    CALuint frameRateNum, CALuint frameRateDenom, CAL_VID_ENCODE_JOB_PRIORITY  encode_priority_level);
 typedef CALresult (CALAPIENTRYP PFNCALENCODECLOSESESSION)(CALcontext ctx, CALuint device_id);
@@ -1401,7 +1334,7 @@ typedef CALresult (CALAPIENTRYP PFNCALWRITEATOMICCOUNTER) (CALdevice dev, CALuin
 typedef CALresult (CALAPIENTRYP PFNCALBINDATOMICCOUNTER) (CALcontext ctx, CALuint index, CALmem handle);
 
 /**
- * @fn calSyncAtomicCounter(CALevent* event, CALdevice dev, CALuint index, 
+ * @fn calSyncAtomicCounter(CALevent* event, CALdevice dev, CALuint index,
  *                          CalAtomicCounterSyncMode sync)
  *
  * @brief Invoke a sync between atomic counter and its bound memory.
